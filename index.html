@@ -70,6 +70,65 @@
   }
 }
 
+/* LETTER RESPONSIVE FOR MOBILE */
+@media (max-width: 576px) {
+
+  /* Letter scales with envelope */
+  .letter {
+    width: 80%;              /* fits nicely inside bigger envelope */
+    height: 70%;             /* leave space for flap animation */
+    top: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    font-size: 1.1rem;       /* readable on small screens */
+    transition: transform 0.4s ease, z-index 0.6s;
+  }
+
+  /* OPEN animation on mobile */
+/* Fully pop-out letter */
+.open .letter {
+  transform: translateY(-120px); /* bigger value for full pop-out */
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* smooth bounce */
+  z-index: 2;
+}
+
+
+  /* flap animation stays correct */
+  .open .flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
+
+  .words {
+  font-size: 1rem;
+  text-align: center;
+  width: 90%;
+  left: 5%;
+}
+
+.words.line1 {
+  top: 10%;
+  font-size: 0.9rem;
+}
+
+.words.line2 {
+  top: 30%;
+  font-size: 1.1rem;
+}
+
+.words.line3 {
+  top: 50%;
+  font-size: 1.1rem;
+}
+
+.words.line4 {
+  top: 70%;
+  font-size: 1.1rem;
+}
+
+}
+
+
   </style>
   <body>
     <!-- tiktok meowish -->
@@ -94,6 +153,8 @@
       <button id="open">Open</button>
       <button id="reset">Close</button>
     </div>
+    <audio id="openSound" src="./sounds/open-envelope.mp3"></audio>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="love letter 2.js"></script>
