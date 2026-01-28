@@ -154,9 +154,24 @@
       <button id="reset">Close</button>
     </div>
     <audio id="openSound" src="./sounds/open-envelope.mp3"></audio>
+  <script>
+    const openBtn = document.getElementById('open');
+const envelope = document.getElementById('envelope');
+const openSound = document.getElementById('openSound');
 
+openBtn.addEventListener('click', function() {
+    envelope.classList.add('open');
+    envelope.classList.remove('close');
+
+    // play sound
+    openSound.currentTime = 0; // restart if clicked again
+    openSound.play();
+});
+
+  </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="love letter 2.js"></script>
   </body>
 </html>
+
