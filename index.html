@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Love letter for crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="love letter 2.css" />
+  </head>
+
+  <style>
+    /* MOBILE FULLSCREEN ENVELOPE */
+@media only screen and (max-width: 576px) {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f7d9e3, #f0e6f6);
+  }
+
+  .envlope-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #envelope {
+    width: 90vw;        /* responsive width */
+    height: 60vw;       /* keep ratio for envelope */
+    max-width: 360px;   /* limit for bigger phones */
+    max-height: 240px;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  /* FLAP */
+  .flap {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+    border-top: 32vw solid #d9534f;
+  }
+
+  /* POCKET */
+  .pocket {
+    border-left: 45vw solid #f5a3a2;
+    border-right: 45vw solid #f5a3a2;
+    border-bottom: 28vw solid #ff6f61;
+  }
+
+  /* LETTER TEXT */
+  .letter {
+    font-size: 1.1rem;
+  }
+
+  /* BUTTONS */
+  .reset {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+  </style>
+  <body>
+    <!-- tiktok meowish -->
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words line1">To: Crush</div>
+          <div class="words line2">Dear crush, you are so beautiful</div>
+          <div class="words line3">That every time i see you</div>
+          <div class="words line4">my world stops,</div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="reset">
+      <button id="open">Open</button>
+      <button id="reset">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="love letter 2.js"></script>
+  </body>
+</html>
